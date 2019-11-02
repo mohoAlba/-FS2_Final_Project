@@ -1,0 +1,53 @@
+<html>
+    
+    <body style="text-align: center; background-color: lightsalmon;">
+        <script src="auth.js"></script>
+        <h2> HELLO TO THE SIGN UP PAGE</h2>
+        <label>Username: </label> <input id="username" placeholder="username">
+        <br>
+        <label >Password: </label><input id="password" placeholder="choose a password">
+        <br>
+        <label>confiPass:</label><input id="confirmPassword" placeholder="confirm password">
+        <br>
+        <button onclick="submitInfo()" type="submit">SUBMIT</button> 
+        <br>
+        <a href="index.html"> MAIN PAGE</a>
+        
+        <!--Below is a javascript file that checks if the password is equal to 
+        confirm passowrd-->
+        <script>
+            var ID = {
+                      "username": "",
+                      "password": ""
+                     }
+                     
+
+            // variables to hold the value of password and confirmpassword
+            var passowrd = document.getElementById("password");
+            var confirmPassword = document.getElementById("confirmPassword");
+
+            // variable to hold the value of the username
+            var username = document.getElementById("username");
+            
+            // The function below is to check weither the passwords are equal
+            // and weither the user name is less than 5 charectars
+
+            function submitInfo() {
+                // if the password is not equal to confirm password or the username's length
+                // is not correct it will return an alert message warning the user that there
+                // has been a mistake
+                if ( passowrd.value != confirmPassword.value || username.value.length < 5) {
+                    alert("Invaild passwords " + "check the username. usernames must be more 5 char");
+                    console.log("The passwords are not a match ");
+                    return false;
+                // If the everything goes without any mistake it will register the user's 
+                // 
+                } else {
+                    
+                    console.log("signning you up"); 
+                }
+            }
+            
+        </script>
+    </body>
+</html>
